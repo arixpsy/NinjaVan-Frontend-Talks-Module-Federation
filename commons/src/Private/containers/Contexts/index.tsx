@@ -24,7 +24,7 @@ const ContextsPage: React.FC = () => {
         <Descriptions.Item
           label={
             <Space>
-              isAuthenticated<Tag color='geekblue'>boolean</Tag>
+              isAuthenticated<Tag color="geekblue">boolean</Tag>
             </Space>
           }
         >
@@ -33,7 +33,7 @@ const ContextsPage: React.FC = () => {
         <Descriptions.Item
           label={
             <Space>
-              scopes <Tag color='geekblue'>{`Record<String, boolean>`}</Tag>
+              scopes <Tag color="geekblue">{`Record<String, boolean>`}</Tag>
             </Space>
           }
         >
@@ -42,7 +42,7 @@ const ContextsPage: React.FC = () => {
         <Descriptions.Item
           label={
             <Space>
-              handleLogout<Tag color='geekblue'>Function</Tag>
+              handleLogout<Tag color="geekblue">Function</Tag>
             </Space>
           }
         >
