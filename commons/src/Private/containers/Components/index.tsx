@@ -1,13 +1,12 @@
 import React from "react";
 import { Container } from "../../constants/styles";
-import { Card as AntdCard, Card, Descriptions, Tag } from "antd";
 import { CardComponentContract } from "./../../../Components/Card";
 import ComponentPreview from "../../components/ComponentPreview";
 
 const ComponentsPage: React.FC = () => {
   return (
     <Container>
-     <ComponentPreview componentContract={CardComponentContract} />
+      <ComponentPreview componentContract={CardComponentContract} />
     </Container>
   );
 };

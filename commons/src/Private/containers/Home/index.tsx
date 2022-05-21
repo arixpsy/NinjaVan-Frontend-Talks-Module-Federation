@@ -13,14 +13,14 @@ const HomePage: React.FC = () => {
       ...Object.keys(packageJson.dependencies),
       ...Object.keys(packageJson.devDependencies),
     ];
-    dependencyList.sort()
+    dependencyList.sort();
 
-    const tempArray = []
+    const tempArray = [];
     for (const name of dependencyList) {
       if (name in packageJson.dependencies) {
-        tempArray.push([name, packageJson.dependencies[name]])
+        tempArray.push([name, packageJson.dependencies[name]]);
       } else {
-        tempArray.push([name, packageJson.devDependencies[name]])
+        tempArray.push([name, packageJson.devDependencies[name]]);
       }
     }
 
@@ -47,9 +47,15 @@ const HomePage: React.FC = () => {
         </Descriptions.Item>
       </Descriptions>
 
-      <Descriptions title="Project Dependencies" bordered>
+      <Descriptions
+        title="Project Dependencies"
+        bordered
+        column={{ xxl: 4, xl: 3, lg: 2, md: 2, sm: 2, xs: 1 }}
+      >
         {allDependencies.map(([packageName, version]) => (
-          <Descriptions.Item key={packageName} label={packageName}>{version}</Descriptions.Item>
+          <Descriptions.Item key={packageName} label={packageName}>
+            {version}
+          </Descriptions.Item>
         ))}
       </Descriptions>
     </Container>

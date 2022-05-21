@@ -1,6 +1,10 @@
 import React from "react";
 import { Card, Tag } from "antd";
-import { ComponentPreviewArea, StyledDescriptions, ComponentInfoContainer } from "./styles";
+import {
+  ComponentPreviewArea,
+  StyledDescriptions,
+  ComponentInfoContainer,
+} from "./styles";
 import { IComponentContract } from "../../types/commons/componentContract";
 
 type ComponentPreviewProps = {
