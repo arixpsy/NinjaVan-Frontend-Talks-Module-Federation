@@ -1,7 +1,8 @@
 import React from "react";
+import { Container } from "../../constants/styles";
 
 const ContextsPage: React.FC = () => {
-  return <div>Contexts Page</div>;
+  return <Container>Contexts Page</Container>;
 };
 
 export default ContextsPage;
