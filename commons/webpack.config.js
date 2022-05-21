@@ -54,7 +54,6 @@ module.exports = {
       exposes: {
         "./Utils": "./src/Utils",
         "./Constants": "./src/Constants",
-        "./Services/nvApi": "./src/Services/nvApi",
         "./Contexts/auth": "./src/Contexts/auth",
         "./Components/Card": "./src/Components/Card",
       },

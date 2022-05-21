@@ -3,7 +3,6 @@ export const enum ROUTES {
   COMPONENTS = "/components",
   CONSTANTS = "/constants",
   CONTEXTS = "/contexts",
-  SERVICES = "/services",
   UTILS = "/utils",
 }
 
@@ -12,6 +11,5 @@ export const enum PAGE_LABELS {
   COMPONENTS = "Components",
   CONSTANTS = "Constants",
   CONTEXTS = "Contexts",
-  SERVICES = "Services",
   UTILS = "Utils",
 }

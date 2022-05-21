@@ -5,7 +5,6 @@ import {
   AppstoreOutlined,
   BarsOutlined,
   ExpandOutlined,
-  PartitionOutlined,
   ControlOutlined,
 } from "@ant-design/icons";
 import {
@@ -13,7 +12,6 @@ import {
   Components,
   Constants,
   Contexts,
-  Services,
   Utils,
 } from "./../containers";
 
@@ -50,14 +48,6 @@ export const navigation: Record<ROUTES, INavConfig> = {
       component: Contexts,
     },
   },
-  [ROUTES.SERVICES]: {
-    path: ROUTES.SERVICES,
-    nav: {
-      icon: PartitionOutlined,
-      label: PAGE_LABELS.SERVICES,
-      component: Services,
-    },
-  },
   [ROUTES.UTILS]: {
     path: ROUTES.UTILS,
     nav: {
@@ -73,6 +63,5 @@ export const getNavConfig = [
   navigation[ROUTES.COMPONENTS],
   navigation[ROUTES.CONSTANTS],
   navigation[ROUTES.CONTEXTS],
-  navigation[ROUTES.SERVICES],
   navigation[ROUTES.UTILS],
 ];

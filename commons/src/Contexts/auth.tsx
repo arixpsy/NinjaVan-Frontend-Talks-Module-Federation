@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import Cookie from 'js-cookie'
+import Cookie from "js-cookie";
 
-export const COOKIE_ACCESS_TOKEN = 'login_token'
+export const COOKIE_ACCESS_TOKEN = "login_token";
 
 type AuthContextInterface = {
   isAuthenticated: boolean;
@@ -14,7 +14,7 @@ type AuthContextInterface = {
 export const AuthContext = createContext<AuthContextInterface>({
   isAuthenticated: false,
   scopes: {},
-  handleLogout: () => {}
+  handleLogout: () => {},
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -26,9 +26,9 @@ const AuthProvider: React.FC = ({ children }) => {
   }>();
 
   const handleLogout = () => {
-    Cookie.remove(COOKIE_ACCESS_TOKEN)
-    setIsAuthenticated(false)
-  }
+    Cookie.remove(COOKIE_ACCESS_TOKEN);
+    setIsAuthenticated(false);
+  };
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -39,14 +39,14 @@ const AuthProvider: React.FC = ({ children }) => {
   }, [isAuthenticated]);
 
   useEffect(() => {
-    const accessToken = Cookie.get(COOKIE_ACCESS_TOKEN)
+    const accessToken = Cookie.get(COOKIE_ACCESS_TOKEN);
 
     if (accessToken) {
-      setIsAuthenticated(true)
+      setIsAuthenticated(true);
     } else {
-      handleLogout()
+      handleLogout();
     }
-  }, [])
+  }, []);
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, scopes, handleLogout }}>
