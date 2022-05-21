@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ServicesPage: React.FC = () => {
-  return <div>Services Page</div>
-}
+  return <div>Services Page</div>;
+};
 
-export default ServicesPage
+export default ServicesPage;

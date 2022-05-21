@@ -35,4 +35,4 @@ export const Logo = styled.div`
   font-size: 2rem;
   margin: 1rem;
   font-weight: bold;
-`
+`;

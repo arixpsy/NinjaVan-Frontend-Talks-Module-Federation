@@ -11,8 +11,8 @@ import { Layout, Menu } from "antd";
 import { StyledHeader, StyledContent, StyledSider, Logo } from "./styles";
 import { getNavConfig, navigation } from "./Private/config/navConfig";
 import { INavConfig } from "./Private/types/commons/nav";
-import "./index.css";
 import { ROUTES } from "./Private/constants/nav";
+import "./index.css";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -37,7 +37,11 @@ const App = () => {
         <StyledContent>
           <Routes>
             {getNavConfig.map((el: INavConfig) => (
-              <Route path={el.path} element={React.createElement(el.nav.component)} />
+              <Route
+                key={el.path}
+                path={el.path}
+                element={React.createElement(el.nav.component)}
+              />
             ))}
           </Routes>
         </StyledContent>
@@ -50,6 +54,5 @@ ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-
   document.getElementById("app")
 );

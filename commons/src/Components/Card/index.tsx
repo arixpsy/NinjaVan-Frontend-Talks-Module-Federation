@@ -2,12 +2,10 @@ import React from "react";
 import { CardContainer } from "./styles";
 
 type CardProps = {
-  name?: string
+  name?: string;
 };
 
-const Card: React.FC<CardProps> = ({
-  name = 'Ninja'
-}) => {
+const Card: React.FC<CardProps> = ({ name = "Ninja" }) => {
   return (
     <CardContainer>
       <h1>My React Commons Card</h1>
