@@ -47,7 +47,7 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         commons: "commons@https://reactcommons.netlify.app/remoteEntry.js",
-        example_service: "example_service@https://fakeexampleservice.netlify.app/",
+        example_service: "example_service@https://fakeexampleservice.netlify.app/remoteEntry.js",
       },
       exposes: {},
       shared: {
