@@ -1,22 +1,19 @@
-declare module 'commons/Components/Card' {
+declare module "commons/Components/Card" {
   const Card: React.FC<{
-    name: string
+    name: string;
   }>;
 
-  export default Card
+  export default Card;
 }
 
-declare module 'commons/Utils' {
+declare module "commons/Utils" {
   const DataUtils: {
-    toSnakeCase: Function
-  }
+    toSnakeCase: Function;
+  };
 
   const CountryUtils: {
+    [key: string]: any;
+  };
 
-  }
-
-  export {
-    DataUtils,
-    CountryUtils,
-  }
+  export { DataUtils, CountryUtils };
 }

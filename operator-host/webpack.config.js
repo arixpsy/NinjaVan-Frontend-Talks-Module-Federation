@@ -4,7 +4,8 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "https://fakeoperator.netlify.app/",
+    // publicPath: "https://fakeoperator.netlify.app/",
+    publicPath: "http://localhost:8081/"
   },
 
   resolve: {
