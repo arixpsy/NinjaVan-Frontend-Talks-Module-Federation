@@ -9,6 +9,7 @@ export const Container = styled.div`
   gap: 1rem;
   background-color: white;
   padding: 2rem;
+  margin: 2rem 3rem;
 `;
 
 export const StyledSider = styled(Sider)`
@@ -41,7 +42,6 @@ export const StyledHeader = styled(Header)`
 export const StyledContent = styled(Content)`
   && {
     height: calc(100vh - 64px);
-    padding: 2rem 3rem;
     overflow-y: auto;
   }
 `;

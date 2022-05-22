@@ -18,6 +18,9 @@ import { INavConfig } from "./types/commons/nav";
 import { navigation, getNavConfig } from "./config/navConfig";
 import { ROUTES } from "./constants/nav";
 
+// From React Commons
+import AuthProvider from "commons/Contexts/auth";
+
 import "./index.css";
 
 const App = () => {
@@ -59,7 +62,9 @@ const App = () => {
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </BrowserRouter>,
   document.getElementById("app")
 );

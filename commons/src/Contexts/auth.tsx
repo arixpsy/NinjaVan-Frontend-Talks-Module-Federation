@@ -35,6 +35,8 @@ const AuthProvider: React.FC = ({ children }) => {
       setScopes({
         MANAGE_MY_DEPRESSION: true,
       });
+    } else {
+      setScopes({});
     }
   }, [isAuthenticated]);
 
