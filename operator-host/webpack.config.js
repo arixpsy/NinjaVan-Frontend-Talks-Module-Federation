@@ -1,11 +1,12 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const CopyPlugin = require('copy-webpack-plugin')
 
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    // publicPath: "https://fakeoperator.netlify.app/",
-    publicPath: "http://localhost:8081/"
+    publicPath: "https://fakeoperator.netlify.app/",
+    // publicPath: "http://localhost:8081/"
   },
 
   resolve: {
@@ -63,5 +64,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
+    new CopyPlugin({
+			patterns: [{ from: 'public' }],
+		}),
   ],
 };

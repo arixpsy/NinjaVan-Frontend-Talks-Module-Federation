@@ -5,6 +5,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
     publicPath: "https://reactcommons.netlify.app/",
+    // publicPath: "http://localhost:8080/"
   },
 
   resolve: {
