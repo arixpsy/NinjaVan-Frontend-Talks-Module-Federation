@@ -1,7 +1,10 @@
 import { ROUTES, PAGE_LABELS } from "../constants/nav";
 import { INavConfig } from "../types/commons/nav";
 import { HomeOutlined, AppstoreOutlined } from "@ant-design/icons";
-import { Home, MicroSite } from "./../containers";
+import { Home } from "./../containers";
+
+// From Example service
+import ExampleServiceHome from "example_service/Containers/ExampleServiceHome";
 
 export const navigation: Record<ROUTES, INavConfig> = {
   [ROUTES.HOME]: {
@@ -17,7 +20,7 @@ export const navigation: Record<ROUTES, INavConfig> = {
     nav: {
       icon: AppstoreOutlined,
       label: PAGE_LABELS.MICROSITE,
-      component: MicroSite,
+      component: ExampleServiceHome,
     },
   },
 };

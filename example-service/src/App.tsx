@@ -1,14 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ExampleServiceHome from "./Containers/ExampleServiceHome";
 
 import "./index.css";
 
 const App = () => (
-  <div className="container">
-    <div>Name: example-service</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
+  <div style={{ height: "100vh" }}>
+    <ExampleServiceHome />
   </div>
 );
 ReactDOM.render(<App />, document.getElementById("app"));

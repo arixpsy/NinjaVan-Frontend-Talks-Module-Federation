@@ -1,12 +1,12 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const CopyPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
     publicPath: "https://fakeoperator.netlify.app/",
-    // publicPath: "http://localhost:8081/"
+    // publicPath: "http://localhost:8081/",
   },
 
   resolve: {
@@ -46,7 +46,8 @@ module.exports = {
       name: "operator_host",
       filename: "remoteEntry.js",
       remotes: {
-        commons: 'commons@https://reactcommons.netlify.app/remoteEntry.js',
+        commons: "commons@https://reactcommons.netlify.app/remoteEntry.js",
+        example_service: "example_service@https://fakeexampleservice.netlify.app/",
       },
       exposes: {},
       shared: {
@@ -65,7 +66,7 @@ module.exports = {
       template: "./src/index.html",
     }),
     new CopyPlugin({
-			patterns: [{ from: 'public' }],
-		}),
+      patterns: [{ from: "public" }],
+    }),
   ],
 };

@@ -4,7 +4,8 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:8082/",
+    publicPath: "https://fakeexampleservice.netlify.app/",
+    // publicPath: "http://localhost:8082/",
   },
 
   resolve: {
@@ -43,8 +44,12 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "example_service",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      remotes: {
+        commons: 'commons@https://reactcommons.netlify.app/remoteEntry.js',
+      },
+      exposes: {
+        './Containers/ExampleServiceHome': './src/Containers/ExampleServiceHome'
+      },
       shared: {
         ...deps,
         react: {

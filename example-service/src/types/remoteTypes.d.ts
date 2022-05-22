@@ -45,9 +45,3 @@ declare module "commons/Contexts/auth" {
   export default AuthProvider;
   export { useAuth, COOKIE_ACCESS_TOKEN };
 }
-
-declare module "example_service/Containers/ExampleServiceHome" {
-  const ExampleServiceHome: React.FC;
-
-  export default ExampleServiceHome;
-}
